@@ -8,7 +8,7 @@
 			"name": "start",
 			"type": "registry:theme",
 			"title": "Starting Prototype",
-			"description": "A blank app with the Zinnia theme installed that should be used as a parent dependency for all other items.",
+			"description": "A blank app with the Lumon theme preconfigured.",
 			"files": [
 				{
 					"path": "tailwind.config.ts",
@@ -21,177 +21,14 @@
 					"target": "app/globals.css"
 				},
 				{
-					"path": "app/(zapier)/layout.tsx",
+					"path": "app/(lumon)/layout.tsx",
 					"type": "registry:file",
 					"target": "app/layout.tsx"
 				},
 				{
-					"path": "components/zapier-header.tsx",
+					"path": "components/app-sidebar.tsx",
 					"type": "registry:file",
-					"target": "components/zapier-header.tsx"
-				},
-				{
-					"path": "components/zapier-sidebar.tsx",
-					"type": "registry:file",
-					"target": "components/zapier-sidebar.tsx"
-				}
-			]
-		},
-		{
-			"$schema": "https://ui.shadcn.com/schema/registry-item.json",
-			"name": "button",
-			"type": "registry:ui",
-			"title": "Button",
-			"description": "Zinnia Button",
-			"registryDependencies": [
-				"https://zinnia-registry.vercel.app/r/start.json"
-			],
-			"files": [
-				{
-					"path": "components/ui/button.tsx",
-					"type": "registry:file",
-					"target": "components/ui/button.tsx"
-				},
-				{
-					"path": "app/(internal)/ui/button/page.tsx",
-					"type": "registry:file",
-					"target": "app/ui/button/page.tsx"
-				}
-			]
-		},
-		{
-			"$schema": "https://ui.shadcn.com/schema/registry-item.json",
-			"name": "sidebar",
-			"type": "registry:ui",
-			"title": "sidebar",
-			"description": "Zinnia Sidebar (With SidebarProvider Layout)",
-			"registryDependencies": [
-				"https://zinnia-registry.vercel.app/r/start.json"
-			],
-			"files": [
-				{
-					"path": "components/ui/sidebar.tsx",
-					"type": "registry:file",
-					"target": "components/ui/sidebar.tsx"
-				},
-				{
-					"path": "app/(internal)/ui/sidebar/page.tsx",
-					"type": "registry:file",
-					"target": "app/ui/sidebar/page.tsx"
-				},
-				{
-					"path": "app/(zapier)/sidebar-example/page.tsx",
-					"type": "registry:file",
-					"target": "app/ui/sidebar/example/page.tsx"
-				}
-			]
-		},
-		{
-			"$schema": "https://ui.shadcn.com/schema/registry-item.json",
-			"name": "dashboard",
-			"type": "registry:ui",
-			"title": "Dashboard",
-			"description": "Zapier Dashboard",
-			"registryDependencies": [
-				"https://zinnia-registry.vercel.app/r/start.json"
-			],
-			"files": [
-				{
-					"path": "app/(zapier)/dashboard/page.tsx",
-					"type": "registry:file",
-					"target": "app/page.tsx"
-				},
-				{
-					"path": "components/dashboard-header.tsx",
-					"type": "registry:file",
-					"target": "components/dashboard-header.tsx"
-				},
-				{
-					"path": "components/health-summary.tsx",
-					"type": "registry:file",
-					"target": "components/health-summary.tsx"
-				},
-				{
-					"path": "components/quick-actions.tsx",
-					"type": "registry:file",
-					"target": "components/quick-actions.tsx"
-				},
-				{
-					"path": "components/recent-activity.tsx",
-					"type": "registry:file",
-					"target": "components/recent-activity.tsx"
-				},
-				{
-					"path": "components/zap-overview.tsx",
-					"type": "registry:file",
-					"target": "components/zap-overview.tsx"
-				}
-			]
-		},
-		{
-			"$schema": "https://ui.shadcn.com/schema/registry-item.json",
-			"name": "test",
-			"type": "registry:ui",
-			"title": "Dashboard",
-			"description": "Zapier Dashboard",
-			"registryDependencies": [
-				"https://zinnia-registry.vercel.app/r/start.json"
-			],
-			"files": [
-				{
-					"path": "components/ui/sidebar.tsx",
-					"type": "registry:file",
-					"target": "components/ui/sidebar.tsx"
-				},
-				{
-					"path": "app/(internal)/ui/sidebar/page.tsx",
-					"type": "registry:file",
-					"target": "app/ui/sidebar/page.tsx"
-				},
-				{
-					"path": "app/(zapier)/sidebar-example/page.tsx",
-					"type": "registry:file",
-					"target": "app/ui/sidebar/example/page.tsx"
-				},
-				{
-					"path": "components/ui/button.tsx",
-					"type": "registry:file",
-					"target": "components/ui/button.tsx"
-				},
-				{
-					"path": "app/(internal)/ui/button/page.tsx",
-					"type": "registry:file",
-					"target": "app/ui/button/page.tsx"
-				},
-				{
-					"path": "app/(zapier)/dashboard/page.tsx",
-					"type": "registry:file",
-					"target": "app/page.tsx"
-				},
-				{
-					"path": "components/dashboard-header.tsx",
-					"type": "registry:file",
-					"target": "components/dashboard-header.tsx"
-				},
-				{
-					"path": "components/health-summary.tsx",
-					"type": "registry:file",
-					"target": "components/health-summary.tsx"
-				},
-				{
-					"path": "components/quick-actions.tsx",
-					"type": "registry:file",
-					"target": "components/quick-actions.tsx"
-				},
-				{
-					"path": "components/recent-activity.tsx",
-					"type": "registry:file",
-					"target": "components/recent-activity.tsx"
-				},
-				{
-					"path": "components/zap-overview.tsx",
-					"type": "registry:file",
-					"target": "components/zap-overview.tsx"
+					"target": "components/app-sidebar.tsx"
 				}
 			]
 		}
