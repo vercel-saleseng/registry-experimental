@@ -3,7 +3,15 @@
 import type * as React from "react";
 import { useRouter, usePathname } from "next/navigation";
 import Link from "next/link";
-import { Home, FlaskConical } from "lucide-react";
+import {
+  Home,
+  FlaskConical,
+  LayoutDashboard,
+  Terminal,
+  MonitorPlay,
+  Library,
+  Lightbulb,
+} from "lucide-react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import {
@@ -58,16 +66,39 @@ export function InternalSidebar({
 
   const mainNavItems: NavItem[] = [
     {
+      title: "Learn More",
+      href: "https://ui.shadcn.com/docs/registry",
+      icon: <Library className="h-4 w-4" />,
+    },
+    {
       title: "Experimental",
       href: "/experimental",
       icon: <FlaskConical className="h-4 w-4" />,
     },
   ];
 
+  const templateSources: NavItem[] = [
+    {
+      title: "Dashboard",
+      href: "/dashboard",
+      icon: <LayoutDashboard className="h-4 w-4" />,
+    },
+    {
+      title: "Couch Surfer",
+      href: "/couch-surfer",
+      icon: <MonitorPlay className="h-4 w-4" />,
+    },
+    {
+      title: "Terminal",
+      href: "/terminal",
+      icon: <Terminal className="h-4 w-4" />,
+    },
+  ];
+
   return (
     <Sidebar variant="sidebar" collapsible="icon">
       <SidebarHeader>
-        <header className="flex items-center gap-4">
+        <header className="px-2 py-4 flex items-center">
           <h1 className="text-xl font-bold text-[var(--zds-text-stronger)]">
             LumonCn
           </h1>
@@ -117,6 +148,29 @@ export function InternalSidebar({
                       {item.badge.text}
                     </SidebarMenuBadge>
                   )}
+                </SidebarMenuItem>
+              ))}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+
+        {/* Template Sources */}
+        <SidebarGroup>
+          <SidebarGroupLabel>Template Sources</SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              {templateSources.map((item) => (
+                <SidebarMenuItem className="py-1" key={item.href}>
+                  <SidebarMenuButton
+                    asChild
+                    isActive={pathname.startsWith(item.href)}
+                    tooltip={item.title}
+                  >
+                    <Link href={item.href}>
+                      {item.icon}
+                      <span>{item.title}</span>
+                    </Link>
+                  </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}
             </SidebarMenu>
