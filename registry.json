@@ -183,11 +183,6 @@
 					"target": "app/layout.tsx"
 				},
 				{
-					"path": "app/(carbon)/global.scss",
-					"type": "registry:file",
-					"target": "app/(carbon)/global.scss"
-				},
-				{
 					"path": "app/(carbon)/carbon/page.tsx",
 					"type": "registry:file",
 					"target": "app/carbon/page.tsx"

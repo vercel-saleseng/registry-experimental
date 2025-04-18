@@ -1,7 +1,7 @@
 "use client";
 
 import type React from "react";
-import "@/app/(carbon)/global.scss";
+import "@carbon/styles/css/styles.css";
 
 export default function RootLayout({
   children,

@@ -40,7 +40,6 @@ export default function Page() {
 
         <FormGroup className="some-class" legendText="File Uploader">
           <FileUploader
-            id="file-1"
             role="button"
             labelDescription="Max file size is 500 MB. Only .jpg files are supported."
             buttonLabel="Add file"
