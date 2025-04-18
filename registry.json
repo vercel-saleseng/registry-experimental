@@ -31,14 +31,14 @@
 			"$schema": "https://ui.shadcn.com/schema/registry-item.json",
 			"name": "dashboard",
 			"type": "registry:component",
-			"title": "LumonCn Dashboard",
+			"title": "Dashboard",
 			"description": "A complete dashboard implementation with sidebar, stats cards, charts, and tables.",
 			"registryDependencies": ["https://registry-demo-xi.vercel.app/r/start.json"],
 			"files": [
 				{
 					"path": "app/(lumon)/dashboard/page.tsx",
 					"type": "registry:file",
-					"target": "app/page.tsx"
+					"target": "app/dashboard/page.tsx"
 				},
 				{
 					"path": "components/dashboard/app-sidebar.tsx",
@@ -84,7 +84,7 @@
 		},
 		{
 			"$schema": "https://ui.shadcn.com/schema/registry-item.json",
-			"name": "LumonCn Terminal",
+			"name": "Terminal",
 			"type": "registry:component",
 			"title": "Terminal Interface",
 			"description": "An interactive terminal interface with number grid, progress tracking, and file selection.",
@@ -121,8 +121,8 @@
 			"$schema": "https://ui.shadcn.com/schema/registry-item.json",
 			"name": "couch-surfer",
 			"type": "registry:component",
-			"title": "LumonCn Couch Surfer",
-			"description": "A TV show discovery app with show details, search functionality, and popular shows listing.",
+			"title": "Couch Surfer",
+			"description": "A fullstack TV show discovery app with show details, search functionality, and popular shows listing.",
 			"registryDependencies": ["https://registry-demo-xi.vercel.app/r/start.json"],
 			"files": [
 				{
@@ -141,6 +141,11 @@
 					"target": "app/couch-surfer/show/[id]/page.tsx"
 				},
 				{
+					"path": "app/(lumon)/couch-surfer/show/[id]/loading.tsx",
+					"type": "registry:file",
+					"target": "app/couch-surfer/show/[id]/loading.tsx"
+				},
+				{
 					"path": "components/couch-surfer/popular-shows.tsx",
 					"type": "registry:file",
 					"target": "components/couch-surfer/popular-shows.tsx"
@@ -151,9 +156,41 @@
 					"target": "components/couch-surfer/search-bar.tsx"
 				},
 				{
+					"path": "components/couch-surfer/search-results.tsx",
+					"type": "registry:file",
+					"target": "components/couch-surfer/search-results.tsx"
+				},
+				{
 					"path": "components/couch-surfer/show-details.tsx",
 					"type": "registry:file",
 					"target": "components/couch-surfer/show-details.tsx"
+				}
+			]
+		},
+		{
+			"$schema": "https://ui.shadcn.com/schema/registry-item.json",
+			"name": "carbon",
+			"type": "registry:component",
+			"title": "Carbon Design Components",
+			"description": "A demonstration page of Carbon Design System form components including inputs, checkboxes, radio buttons, selects and more.",
+			"dependencies": [
+				"@carbon/react"
+			],
+			"files": [
+				{
+					"path": "app/(carbon)/layout.tsx",
+					"type": "registry:file",
+					"target": "app/layout.tsx"
+				},
+				{
+					"path": "app/(carbon)/global.scss",
+					"type": "registry:file",
+					"target": "app/(carbon)/global.scss"
+				},
+				{
+					"path": "app/(carbon)/carbon/page.tsx",
+					"type": "registry:file",
+					"target": "app/carbon/page.tsx"
 				}
 			]
 		}

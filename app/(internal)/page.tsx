@@ -25,14 +25,16 @@ export default function Home() {
         </section>
         <section>
           <div className="flex items-center justify-between p-2">
-            <h3 className="text-lg font-medium text-[var(--zds-text-stronger)]">
-              Dashboard
-            </h3>
-            <p>
-              Opens a complete dashboard implementation with sidebar, stats
-              cards, charts, and tables.
-            </p>
-            <a href="https://v0.dev/chat/api/open?title=LumonCn+Dashboard&prompt=A+complete+dashboard+implementation+with+sidebar%2C+stats+cards%2C+charts%2C+and+tables.&url=https%3A%2F%2Fregistry-demo-xi.vercel.app%2Fr%2Fdashboard.json">
+            <span className="flex flex-col">
+              <h3 className="text-lg font-medium text-[var(--zds-text-stronger)]">
+                Dashboard
+              </h3>
+              <p>
+                Opens a complete dashboard implementation with sidebar, stats
+                cards, charts, and tables.
+              </p>
+            </span>
+            <a href="https://v0.dev/chat/api/open?title=Dashboard&prompt=A+complete+dashboard+implementation+with+sidebar%2C+stats+cards%2C+charts%2C+and+tables.&url=https%3A%2F%2Fregistry-demo-xi.vercel.app%2Fr%2Fdashboard.json">
               <img
                 src="https://v0.dev/chat-static/button.svg"
                 alt="Open in v0"
@@ -54,10 +56,16 @@ export default function Home() {
         </section>
         <section>
           <div className="flex items-center justify-between p-2">
-            <h3 className="text-lg font-medium text-[var(--zds-text-stronger)]">
-              Terminal
-            </h3>
-            <a href="https://v0.dev/chat/api/open?title=Dashboard&prompt=Zapier+Dashboard&url=https%3A%2F%2Fzinnia-registry.vercel.app%2Fr%2Fdashboard.json">
+            <span className="flex flex-col">
+              <h3 className="text-lg font-medium text-[var(--zds-text-stronger)]">
+                Terminal
+              </h3>
+              <p>
+                Opens an interactive terminal interface with number grid,
+                progress tracking, and file selection.
+              </p>
+            </span>
+            <a href="https://v0.dev/chat/api/open?title=Terminal&prompt=An+interactive+terminal+interface+with+number+grid%2C+progress+tracking%2C+and+file+selection.&url=https%3A%2F%2Fregistry-demo-xi.vercel.app%2Fr%2Fterminal.json">
               <img
                 src="https://v0.dev/chat-static/button.svg"
                 alt="Open in v0"
@@ -79,9 +87,15 @@ export default function Home() {
         </section>
         <section>
           <div className="flex items-center justify-between p-2">
-            <h3 className="text-lg font-medium text-[var(--zds-text-stronger)]">
-              Couch Surfer
-            </h3>
+            <span className="flex flex-col">
+              <h3 className="text-lg font-medium text-[var(--zds-text-stronger)]">
+                Couch Surfer
+              </h3>
+              <p>
+                Opens a fullstack TV show discovery app with show details,
+                search functionality, and popular shows listing.
+              </p>
+            </span>
             <a href="https://v0.dev/chat/api/open?title=Dashboard&prompt=Zapier+Dashboard&url=https%3A%2F%2Fzinnia-registry.vercel.app%2Fr%2Fdashboard.json">
               <img
                 src="https://v0.dev/chat-static/button.svg"
@@ -96,9 +110,9 @@ export default function Home() {
             className={`h-[800px] w-full rounded-md border border-border overflow-hidden`}
           >
             <iframe
-              src="/terminal"
+              src="/couch-surfer"
               className="w-full h-full"
-              title="Terminal"
+              title="Couch Surfer"
             />
           </div>
         </section>

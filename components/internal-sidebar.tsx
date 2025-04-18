@@ -3,7 +3,7 @@
 import type * as React from "react";
 import { useRouter, usePathname } from "next/navigation";
 import Link from "next/link";
-import { Home } from "lucide-react";
+import { Home, FlaskConical } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import {
@@ -58,12 +58,9 @@ export function InternalSidebar({
 
   const mainNavItems: NavItem[] = [
     {
-      title: "Button",
-      href: "/ui/button",
-    },
-    {
-      title: "Sidebar",
-      href: "/ui/sidebar",
+      title: "Experimental",
+      href: "/experimental",
+      icon: <FlaskConical className="h-4 w-4" />,
     },
   ];
 
@@ -81,7 +78,7 @@ export function InternalSidebar({
         {/* Main Nav Items */}
         <SidebarGroup>
           <SidebarMenu>
-            <SidebarMenuItem>
+            <SidebarMenuItem className="py-1">
               <SidebarMenuButton
                 asChild
                 isActive={pathname === "/"}
@@ -95,10 +92,9 @@ export function InternalSidebar({
             </SidebarMenuItem>
           </SidebarMenu>
           <SidebarGroupContent>
-            <SidebarGroupLabel>UI Primitives</SidebarGroupLabel>
             <SidebarMenu>
               {mainNavItems.map((item) => (
-                <SidebarMenuItem key={item.href}>
+                <SidebarMenuItem className="py-1" key={item.href}>
                   <SidebarMenuButton
                     asChild
                     isActive={

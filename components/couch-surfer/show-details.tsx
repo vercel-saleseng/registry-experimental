@@ -1,8 +1,8 @@
 "use client"
 
 import Image from "next/image"
-import { useState } from "react"
-import { Calendar, Clock, Star, Tag, Tv2 } from "lucide-react"
+import { useState, useEffect } from "react"
+import { Calendar, Clock, Star, Tag, Tv2, Loader2, AlertCircle } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -15,34 +15,90 @@ interface Episode {
   air_date: string
 }
 
-interface ShowDetailsProps {
-  show: {
-    id: number
-    name: string
-    permalink: string
-    url: string
-    description: string
-    description_source: string
-    start_date: string
-    end_date: string | null
-    country: string
-    status: string
-    runtime: number
-    network: string
-    youtube_link: string | null
-    image_path: string
-    image_thumbnail_path: string
-    rating: string
-    rating_count: string
-    countdown: null | any
-    genres: string[]
-    pictures: string[]
-    episodes: Episode[]
-  }
+interface Show {
+  id: number
+  name: string
+  permalink: string
+  url: string
+  description: string
+  description_source: string
+  start_date: string
+  end_date: string | null
+  country: string
+  status: string
+  runtime: number
+  network: string
+  youtube_link: string | null
+  image_path: string
+  image_thumbnail_path: string
+  rating: string
+  rating_count: string
+  countdown: null | any
+  genres: string[]
+  pictures: string[]
+  episodes: Episode[]
 }
 
-export function ShowDetails({ show }: ShowDetailsProps) {
+interface ShowDetailsProps {
+  showId: string
+}
+
+export function ShowDetails({ showId }: ShowDetailsProps) {
+  const [show, setShow] = useState<Show | null>(null)
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(false)
   const [activeTab, setActiveTab] = useState("overview")
+
+  useEffect(() => {
+    async function fetchShowDetails() {
+      setLoading(true)
+      setError(false)
+
+      try {
+        const res = await fetch(`https://www.episodate.com/api/show-details?q=${showId}`)
+        if (!res.ok) throw new Error("Failed to fetch show details")
+
+        const data = await res.json()
+        if (data.tvShow) {
+          setShow(data.tvShow)
+        } else {
+          setError(true)
+        }
+      } catch (err) {
+        console.error("Error fetching show details:", err)
+        setError(true)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    fetchShowDetails()
+  }, [showId])
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center min-h-[50vh]">
+        <div className="flex flex-col items-center gap-2">
+          <Loader2 className="h-8 w-8 animate-spin text-primary" />
+          <p className="text-sm text-muted-foreground">Loading show data...</p>
+        </div>
+      </div>
+    )
+  }
+
+  if (error || !show) {
+    return (
+      <div className="flex flex-col items-center justify-center min-h-[50vh] px-4 text-center">
+        <AlertCircle className="h-12 w-12 text-destructive mb-4" />
+        <h2 className="text-2xl font-bold mb-2">Something went wrong!</h2>
+        <p className="text-muted-foreground mb-6 max-w-md">
+          We couldn't load the show information. This might be due to a network issue or the API being temporarily
+          unavailable.
+        </p>
+        <Button onClick={() => window.location.reload()}>Try again</Button>
+      </div>
+    )
+  }
 
   // Group episodes by season
   const episodesBySeason =
