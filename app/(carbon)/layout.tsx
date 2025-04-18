@@ -11,13 +11,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <main>
+        <main
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            padding: "20px",
+          }}
+        >
           <div
             style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              padding: "20px",
+              maxWidth: "800px",
             }}
           >
             {children}
