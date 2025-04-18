@@ -7,7 +7,7 @@
 			"$schema": "https://ui.shadcn.com/schema/registry-item.json",
 			"name": "start",
 			"type": "registry:theme",
-			"title": "Starting Prototype",
+			"title": "LumonCn Starting Kit",
 			"description": "A blank app with the Lumon theme preconfigured.",
 			"files": [
 				{
@@ -24,6 +24,101 @@
 					"path": "app/(lumon)/layout.tsx",
 					"type": "registry:file",
 					"target": "app/layout.tsx"
+				}
+			]
+		},
+		{
+			"$schema": "https://ui.shadcn.com/schema/registry-item.json",
+			"name": "dashboard",
+			"type": "registry:component",
+			"title": "Dashboard",
+			"description": "A complete dashboard implementation with sidebar, stats cards, charts, and tables.",
+			"registryDependencies": ["https://registry-demo-xi.vercel.app/r/start.json"],
+			"files": [
+				{
+					"path": "app/(lumon)/dashboard/page.tsx",
+					"type": "registry:file",
+					"target": "app/page.tsx"
+				},
+				{
+					"path": "components/dashboard/app-sidebar.tsx",
+					"type": "registry:file",
+					"target": "components/dashboard/app-sidebar.tsx"
+				},
+				{
+					"path": "components/dashboard/branch-switcher.tsx",
+					"type": "registry:file",
+					"target": "components/dashboard/branch-switcher.tsx"
+				},
+				{
+					"path": "components/dashboard/chart-section.tsx",
+					"type": "registry:file",
+					"target": "components/dashboard/chart-section.tsx"
+				},
+				{
+					"path": "components/dashboard/department-table.tsx",
+					"type": "registry:file",
+					"target": "components/dashboard/department-table.tsx"
+				},
+				{
+					"path": "components/dashboard/header.tsx",
+					"type": "registry:file",
+					"target": "components/dashboard/header.tsx"
+				},
+				{
+					"path": "components/dashboard/recent-activity.tsx",
+					"type": "registry:file",
+					"target": "components/dashboard/recent-activity.tsx"
+				},
+				{
+					"path": "components/dashboard/search-form.tsx",
+					"type": "registry:file",
+					"target": "components/dashboard/search-form.tsx"
+				},
+				{
+					"path": "components/dashboard/stats-cards.tsx",
+					"type": "registry:file",
+					"target": "components/dashboard/stats-cards.tsx"
+				}
+			]
+		},
+		{
+			"$schema": "https://ui.shadcn.com/schema/registry-item.json",
+			"name": "couch-surfer",
+			"type": "registry:component",
+			"title": "Couch Surfer",
+			"description": "A TV show discovery app with show details, search functionality, and popular shows listing.",
+			"registryDependencies": ["https://registry-demo-xi.vercel.app/r/start.json"],
+			"files": [
+				{
+					"path": "app/(lumon)/couch-surfer/page.tsx",
+					"type": "registry:file",
+					"target": "app/couch-surfer/page.tsx"
+				},
+				{
+					"path": "app/(lumon)/couch-surfer/search/page.tsx",
+					"type": "registry:file",
+					"target": "app/couch-surfer/search/page.tsx"
+				},
+				{
+					"path": "app/(lumon)/couch-surfer/show/[id]/page.tsx",
+					"type": "registry:file",
+					"target": "app/couch-surfer/show/[id]/page.tsx"
+				},
+				{
+					"path": "components/couch-surfer/popular-shows.tsx",
+					"type": "registry:file",
+					"target": "components/couch-surfer/popular-shows.tsx"
+				},
+				{
+					"path": "components/couch-surfer/search-bar.tsx",
+					"type": "registry:file",
+					"target": "components/couch-surfer/search-bar.tsx"
+				},
+				{
+					"path": "components/couch-surfer/show-details.tsx",
+					"type": "registry:file",
+					"target": "components/couch-surfer/show-details.tsx"
 				}
 			]
 		}

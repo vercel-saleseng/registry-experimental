@@ -3,7 +3,7 @@ import "@/app/globals.css";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import { Toaster } from "@/components/ui/toaster";
 import { Geist_Mono } from "next/font/google";
-import { AppSidebar } from "@/components/app-sidebar";
+import { AppSidebar } from "@/components/dashboard/app-sidebar";
 
 const geistMono = Geist_Mono({ subsets: ["latin"] });
 

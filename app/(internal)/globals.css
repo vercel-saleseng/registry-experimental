@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+	:root {
+		--background: 180 21.05% 92.55%;
+		--foreground: 188.80 78.95% 18.63%;
+		--card: 180 23.81% 95.88%;
+		--card-foreground: 188.80 78.95% 18.63%;
+		--popover: 180 23.81% 95.88%;
+		--popover-foreground: 188.80 78.95% 18.63%;
+		--primary: 183.97 91.89% 29.02%;
+		--primary-foreground: 0 0% 100%;
+		--secondary: 216.49 78.86% 75.88%;
+		--secondary-foreground: 215 36.36% 25.88%;
+		--muted: 180 19.23% 89.80%;
+		--muted-foreground: 184 31.25% 37.65%;
+		--accent: 184 38.46% 84.71%;
+		--accent-foreground: 188.80 78.95% 18.63%;
+		--destructive: 0 62.45% 51.96%;
+		--destructive-foreground: 0 0% 100%;
+		--border: 185.71 26.58% 84.51%;
+		--input: 180 28.81% 88.43%;
+		--ring: 183.97 91.89% 29.02%;
+		--chart-1: 183.97 91.89% 29.02%;
+		--chart-2: 183.53 69.39% 38.43%;
+		--chart-3: 183.56 55.10% 48.04%;
+		--chart-4: 183.72 53.55% 58.63%;
+		--chart-5: 183.61 54.97% 70.39%;
+		--sidebar: 186.32 34.55% 89.22%;
+		--sidebar-foreground: 188.80 78.95% 18.63%;
+		--sidebar-primary: 183.97 91.89% 29.02%;
+		--sidebar-primary-foreground: 0 0% 100%;
+		--sidebar-accent: 184 38.46% 84.71%;
+		--sidebar-accent-foreground: 188.80 78.95% 18.63%;
+		--sidebar-border: 185.71 26.58% 84.51%;
+		--sidebar-ring: 183.97 91.89% 29.02%;
+		--font-sans: Geist, sans-serif;
+		--font-serif: Courier New, monospace;
+		--font-mono: Courier New, monospace;
+		--radius: 0.125rem;
+		--shadow-2xs: 1px 1px 2px 0px hsl(185 70% 30% / 0.07);
+		--shadow-xs: 1px 1px 2px 0px hsl(185 70% 30% / 0.07);
+		--shadow-sm: 1px 1px 2px 0px hsl(185 70% 30% / 0.15), 1px 1px 2px -1px hsl(185 70% 30% / 0.15);
+		--shadow: 1px 1px 2px 0px hsl(185 70% 30% / 0.15), 1px 1px 2px -1px hsl(185 70% 30% / 0.15);
+		--shadow-md: 1px 1px 2px 0px hsl(185 70% 30% / 0.15), 1px 2px 4px -1px hsl(185 70% 30% / 0.15);
+		--shadow-lg: 1px 1px 2px 0px hsl(185 70% 30% / 0.15), 1px 4px 6px -1px hsl(185 70% 30% / 0.15);
+		--shadow-xl: 1px 1px 2px 0px hsl(185 70% 30% / 0.15), 1px 8px 10px -1px hsl(185 70% 30% / 0.15);
+		--shadow-2xl: 1px 1px 2px 0px hsl(185 70% 30% / 0.38);
+	}
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+  }
+}

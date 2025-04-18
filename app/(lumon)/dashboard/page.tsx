@@ -1,4 +1,4 @@
-import { AppSidebar } from "@/components/app-sidebar";
+import { AppSidebar } from "@/components/dashboard/app-sidebar";
 import { ChartSection } from "@/components/dashboard/chart-section";
 import { DepartmentTable } from "@/components/dashboard/department-table";
 import { DashboardHeader } from "@/components/dashboard/header";

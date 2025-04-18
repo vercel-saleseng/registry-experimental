@@ -8,12 +8,12 @@ export default function Home() {
           <div className="flex items-start justify-between p-2">
             <span className="flex flex-col">
               <h3 className="text-lg font-medium text-[var(--zds-text-stronger)]">
-                Start
+                Starting Kit
               </h3>
-              <p>A blank app with a sidebar, header, and Zinnia styling.</p>
+              <p>Opens a blank app with the Lumon theme preconfigured.</p>
             </span>
 
-            <a href="https://v0.dev/chat/api/open?title=Starter+Kit&prompt=A+blank+app+v0+generation+with+a+sidebar%2C+header%2C+and+Zinnia+styling.+Start+prompting+to+see+a+preview%21+&url=https%3A%2F%2Fzinnia-registry.vercel.app%2Fr%2Fstart.json">
+            <a href="https://v0.dev/chat/api/open?title=LumonCn+Starting+Kit&prompt=A+blank+app+with+the+Lumon+theme+preconfigured.+Begin+prompting+to+create+your+prototype%21+&url=https%3A%2F%2Fregistry-demo-xi.vercel.app%2Fr%2Fstart.json">
               <img
                 src="https://v0.dev/chat-static/button.svg"
                 alt="Open in v0"
@@ -21,12 +21,6 @@ export default function Home() {
                 height="32"
               />
             </a>
-          </div>
-
-          <div
-            className={`h-[800px] w-full rounded-md border border-border overflow-hidden`}
-          >
-            <iframe src="/start" className="w-full h-full" title="Dashboard" />
           </div>
         </section>
         <section>
