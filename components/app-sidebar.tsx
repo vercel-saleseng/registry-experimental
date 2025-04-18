@@ -14,6 +14,7 @@ import {
   SidebarMenuItem,
   SidebarRail,
 } from "@/components/ui/sidebar";
+import Image from "next/image";
 
 // This is sample data.
 const data = {
@@ -151,6 +152,13 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar {...props}>
       <SidebarHeader>
+        <Image
+          height={32}
+          width={239}
+          src="https://9xunyj9nbtcqjdrd.public.blob.vercel-storage.com/lumon-bnmDHU0WvLZp4fEIo7pYFRxdNkWHNi.png"
+          alt="Logo"
+          className="px-2 py-4"
+        />
         <BranchSwitcher
           branches={data.branches}
           defaultBranch={data.branches[0]}

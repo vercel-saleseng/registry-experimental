@@ -1,8 +1,9 @@
 import type React from "react";
 import "@/app/globals.css";
-import { SidebarProvider } from "@/components/ui/sidebar";
+import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import { Toaster } from "@/components/ui/toaster";
 import { Geist_Mono } from "next/font/google";
+import { AppSidebar } from "@/components/app-sidebar";
 
 const geistMono = Geist_Mono({ subsets: ["latin"] });
 
@@ -16,12 +17,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body className={geistMono.className}>
-        <SidebarProvider>
-          <main className="flex justify-center w-full">
-            <div className="container">{children}</div>
-          </main>{" "}
-          <Toaster />
-        </SidebarProvider>
+        <main className="flex justify-center w-full">
+          <div className="container">{children}</div>
+        </main>
       </body>
     </html>
   );

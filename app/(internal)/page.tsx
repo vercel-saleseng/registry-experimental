@@ -54,6 +54,31 @@ export default function Home() {
             />
           </div>
         </section>
+        <section>
+          <div className="flex items-center justify-between p-2">
+            <h3 className="text-lg font-medium text-[var(--zds-text-stronger)]">
+              Terminal
+            </h3>
+            <a href="https://v0.dev/chat/api/open?title=Dashboard&prompt=Zapier+Dashboard&url=https%3A%2F%2Fzinnia-registry.vercel.app%2Fr%2Fdashboard.json">
+              <img
+                src="https://v0.dev/chat-static/button.svg"
+                alt="Open in v0"
+                width="99"
+                height="32"
+              />
+            </a>
+          </div>
+
+          <div
+            className={`h-[800px] w-full rounded-md border border-border overflow-hidden`}
+          >
+            <iframe
+              src="/terminal"
+              className="w-full h-full"
+              title="Terminal"
+            />
+          </div>
+        </section>
       </div>
     </div>
   );

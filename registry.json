@@ -24,11 +24,6 @@
 					"path": "app/(lumon)/layout.tsx",
 					"type": "registry:file",
 					"target": "app/layout.tsx"
-				},
-				{
-					"path": "components/app-sidebar.tsx",
-					"type": "registry:file",
-					"target": "components/app-sidebar.tsx"
 				}
 			]
 		}
