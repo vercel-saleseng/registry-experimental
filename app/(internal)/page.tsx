@@ -21,7 +21,7 @@ export default function Home() {
                     Starting Kit
                   </CardTitle>
                   <CardDescription>
-                    Opens a blank app with the Lumon theme preconfigured.
+                    Opens a blank app with the Cloudscape theme preconfigured.
                   </CardDescription>
                 </div>
                 <a href="https://v0.dev/chat/api/open?title=LumonCn+Starting+Kit&prompt=A+blank+app+with+the+Lumon+theme+preconfigured.+Begin+prompting+to+create+your+prototype%21+&url=https%3A%2F%2Fregistry-demo-ebqw-git-test-vercel-se-team-vtest314.vercel.app%2Fr%2Fstart.json">
