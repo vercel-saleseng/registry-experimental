@@ -38,7 +38,7 @@
 				{
 					"path": "app/(lumon)/dashboard/page.tsx",
 					"type": "registry:file",
-					"target": "app/dashboard/page.tsx"
+					"target": "app/page.tsx"
 				},
 				{
 					"path": "components/dashboard/app-sidebar.tsx",
