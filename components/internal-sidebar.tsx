@@ -98,9 +98,10 @@ export function InternalSidebar({
   return (
     <Sidebar variant="sidebar" collapsible="icon">
       <SidebarHeader>
-        <header className="px-2 py-4 flex items-center">
-          <h1 className="text-xl font-bold text-[var(--zds-text-stronger)]">
-            LumonCn
+        <header className="px-2 py-4">
+          <h1 className="text-base text-[var(--zds-text-stronger)] whitespace-nowrap">
+            <span className="font-bold">Cloudscape</span>
+            <span className="font-normal"> Design System</span>
           </h1>
         </header>
       </SidebarHeader>
@@ -115,7 +116,7 @@ export function InternalSidebar({
                 isActive={pathname === "/"}
                 tooltip="Home"
               >
-                <Link href="/">
+                <Link href="/" className="text-black">
                   <Home className="h-4 w-4" />
                   <span>Home</span>
                 </Link>
@@ -134,7 +135,7 @@ export function InternalSidebar({
                     }
                     tooltip={item.title}
                   >
-                    <Link href={item.href}>
+                    <Link href={item.href} className="text-black">
                       {item.icon}
                       <span>{item.title}</span>
                     </Link>
@@ -166,7 +167,7 @@ export function InternalSidebar({
                     isActive={pathname.startsWith(item.href)}
                     tooltip={item.title}
                   >
-                    <Link href={item.href}>
+                    <Link href={item.href} className="text-black">
                       {item.icon}
                       <span>{item.title}</span>
                     </Link>

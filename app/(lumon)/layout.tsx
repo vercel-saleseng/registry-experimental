@@ -13,19 +13,19 @@ export const metadata = {
   generator: "Lumon registry",
 };
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
         className={`${openSans.className} min-h-screen bg-background text-foreground antialiased`}
       >
-        <SidebarProvider>
-          <div className="relative flex min-h-screen">
-            <AppSidebar />
-            <main className="flex-1 flex-col space-y-4 p-8 pt-6">
-              <div className="flex-1 space-y-4">{children}</div>
-            </main>
-          </div>
+        <SidebarProvider defaultOpen={false}>
+          <AppSidebar />
+          <SidebarInset>{children}</SidebarInset>
           <Toaster />
         </SidebarProvider>
       </body>
