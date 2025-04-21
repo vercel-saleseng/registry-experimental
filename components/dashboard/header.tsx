@@ -6,33 +6,62 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { SidebarTrigger } from "@/components/ui/sidebar";
+import { Globe, ChevronDown, ChevronRight } from "lucide-react";
 
 export function DashboardHeader() {
   return (
-    <div className="flex flex-col gap-6 p-4 md:gap-8">
-      <header className="flex h-16 shrink-0 items-center gap-2 border-b px-4">
-        <SidebarTrigger className="-ml-1" />
-        <Separator orientation="vertical" className="mr-2 h-4" />
+    <div className="flex flex-col">
+      <header className="flex h-14 shrink-0 items-center gap-4 border-b bg-aws-grey-800 px-6">
+        <SidebarTrigger className="-ml-2 text-white" />
+        <Separator orientation="vertical" className="h-6 bg-aws-grey-600" />
+        <div className="flex items-center gap-2">
+          <span className="text-heading-s text-white">CloudWatch</span>
+          <Button
+            variant="ghost"
+            size="sm"
+            className="h-8 gap-1 text-white hover:bg-aws-grey-700"
+          >
+            <Globe className="h-4 w-4" />
+            <span>us-west-2</span>
+            <ChevronDown className="h-4 w-4" />
+          </Button>
+        </div>
+      </header>
+      <div className="flex h-12 items-center border-b bg-aws-grey-100 px-6">
         <Breadcrumb>
-          <BreadcrumbList>
-            <BreadcrumbItem className="hidden md:block">
-              <BreadcrumbLink href="#">Lumon Industries</BreadcrumbLink>
+          <BreadcrumbList className="flex items-center">
+            <BreadcrumbItem className="flex items-center">
+              <BreadcrumbLink
+                href="#"
+                className="flex items-center text-aws-blue-600 hover:underline"
+              >
+                CloudWatch
+              </BreadcrumbLink>
             </BreadcrumbItem>
-            <BreadcrumbSeparator className="hidden md:block" />
-            <BreadcrumbItem>
-              <BreadcrumbPage>Management</BreadcrumbPage>
+            <div className="flex items-center mx-2 text-aws-grey-550">
+              <ChevronRight className="h-4 w-4" />
+            </div>
+            <BreadcrumbItem className="flex items-center">
+              <BreadcrumbPage className="text-aws-grey-600">
+                Dashboard
+              </BreadcrumbPage>
             </BreadcrumbItem>
           </BreadcrumbList>
         </Breadcrumb>
-      </header>
-      <div className="flex flex-col gap-2">
-        <h1 className="text-3xl font-bold tracking-tight">Management</h1>
-        <p className="text-muted-foreground">
-          Monitor and manage the separation between innie and outie
-          consciousness states.
-        </p>
+      </div>
+      <div className="flex items-center justify-between border-b bg-white px-6 py-4">
+        <div>
+          <h1 className="text-heading-l">Dashboard</h1>
+          <p className="text-body-m text-aws-grey-550">
+            Monitor metrics, logs, and application traces
+          </p>
+        </div>
+        <Button className="bg-aws-blue-600 text-white hover:bg-aws-blue-800">
+          Create dashboard
+        </Button>
       </div>
     </div>
   );

@@ -1,94 +1,126 @@
+import { Button } from "@/components/ui/button";
+import { Select } from "@/components/ui/select";
+import { Clock, Download, Filter, MoreHorizontal, ZoomIn } from "lucide-react";
+
 export function ChartSection() {
   return (
-    <div className="col-span-4 rounded-lg border bg-card shadow-sm">
-      <div className="p-6">
-        <h3 className="font-semibold">Work-Life Separation Index</h3>
-        <p className="text-sm text-muted-foreground">
-          Effectiveness of severance chip over the past 30 days
-        </p>
+    <div className="col-span-4 rounded-lg border bg-white">
+      <div className="flex items-center justify-between border-b p-4">
+        <div>
+          <h3 className="text-heading-s">CPU Utilization</h3>
+          <p className="text-body-s text-aws-grey-550">
+            Average across all instances
+          </p>
+        </div>
+        <div className="flex items-center gap-2">
+          <Button
+            variant="ghost"
+            size="sm"
+            className="h-8 gap-1 text-aws-grey-550 hover:bg-aws-grey-200"
+          >
+            <Filter className="h-4 w-4" />
+            <span>Filter</span>
+          </Button>
+          <Button
+            variant="ghost"
+            size="sm"
+            className="h-8 gap-1 text-aws-grey-550 hover:bg-aws-grey-200"
+          >
+            <ZoomIn className="h-4 w-4" />
+            <span>Zoom</span>
+          </Button>
+          <Button
+            variant="ghost"
+            size="sm"
+            className="h-8 gap-1 text-aws-grey-550 hover:bg-aws-grey-200"
+          >
+            <Download className="h-4 w-4" />
+          </Button>
+          <Button
+            variant="ghost"
+            size="sm"
+            className="h-8 text-aws-grey-550 hover:bg-aws-grey-200"
+          >
+            <MoreHorizontal className="h-4 w-4" />
+          </Button>
+        </div>
       </div>
-      <div className="h-[300px] w-full p-6 pt-0">
-        <div className="h-full w-full">
-          <div className="flex items-center justify-between">
-            <div className="space-y-1">
-              <p className="text-sm font-medium">Current: 99.7%</p>
-              <p className="text-xs text-muted-foreground">Target: 99.9%</p>
+      <div className="space-y-4 p-4">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2">
+              <div className="h-3 w-3 rounded-sm bg-aws-blue-600"></div>
+              <span className="text-body-s">Average</span>
             </div>
-            <div className="shrink-0">
-              <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                <div className="flex items-center gap-1">
-                  <div className="h-2 w-2 rounded-full bg-primary"></div>
-                  <span>Separation Index</span>
-                </div>
-                <div className="flex items-center gap-1">
-                  <div className="h-2 w-2 rounded-full bg-red-500"></div>
-                  <span>Threshold</span>
-                </div>
-              </div>
+            <div className="flex items-center gap-2">
+              <div className="h-3 w-3 rounded-sm bg-aws-grey-300"></div>
+              <span className="text-body-s">p90</span>
             </div>
           </div>
-          <div className="h-[250px] w-full">
-            <svg viewBox="0 0 600 200" className="h-full w-full">
-              {/* Background grid lines */}
-              {Array.from({ length: 6 }).map((_, i) => (
-                <line
-                  key={`grid-${i}`}
-                  x1="0"
-                  y1={i * 40}
-                  x2="600"
-                  y2={i * 40}
-                  stroke="#e5e7eb"
+          <div className="flex items-center gap-2 text-body-s text-aws-grey-550">
+            <Clock className="h-4 w-4" />
+            <span>Last 3 hours</span>
+          </div>
+        </div>
+        <div className="h-[300px] w-full">
+          <svg viewBox="0 0 600 200" className="h-full w-full">
+            {/* Background grid */}
+            <defs>
+              <pattern
+                id="grid"
+                width="60"
+                height="40"
+                patternUnits="userSpaceOnUse"
+              >
+                <path
+                  d="M 60 0 L 0 0 0 40"
+                  fill="none"
+                  stroke="#f1f1f1"
                   strokeWidth="1"
                 />
-              ))}
+              </pattern>
+            </defs>
+            <rect width="600" height="200" fill="url(#grid)" />
 
-              {/* Data line - Separation Index */}
-              <path
-                d="M0,40 C20,38 40,42 60,40 C80,38 100,30 120,32 C140,34 160,20 180,15 C200,10 220,5 240,8 C260,11 280,20 300,18 C320,16 340,25 360,20 C380,15 400,10 420,12 C440,14 460,25 480,20 C500,15 520,10 540,8 C560,6 580,10 600,12"
-                fill="none"
-                stroke="hsl(var(--primary))"
-                strokeWidth="2"
-              />
+            {/* Average CPU line */}
+            <path
+              d="M0,100 C50,80 100,120 150,90 C200,60 250,110 300,70 C350,30 400,150 450,100 C500,50 550,90 600,70"
+              fill="none"
+              stroke="#0073bb"
+              strokeWidth="2"
+            />
 
-              {/* Threshold line */}
-              <path
-                d="M0,20 L600,20"
-                fill="none"
-                stroke="#ef4444"
-                strokeWidth="2"
-                strokeDasharray="4 4"
-              />
+            {/* p90 line */}
+            <path
+              d="M0,120 C50,100 100,140 150,110 C200,80 250,130 300,90 C350,50 400,170 450,120 C500,70 550,110 600,90"
+              fill="none"
+              stroke="#cccccc"
+              strokeWidth="2"
+              strokeDasharray="4 4"
+            />
 
-              {/* Data points */}
-              {[40, 42, 40, 32, 15, 8, 18, 20, 12, 20, 8, 12].map((y, i) => (
-                <circle
-                  key={`point-${i}`}
-                  cx={i * 50 + 50}
-                  cy={y}
-                  r="3"
-                  fill="hsl(var(--primary))"
-                />
-              ))}
+            {/* Y-axis labels */}
+            <text x="10" y="30" className="text-xs fill-aws-grey-550">
+              100%
+            </text>
+            <text x="10" y="110" className="text-xs fill-aws-grey-550">
+              50%
+            </text>
+            <text x="10" y="190" className="text-xs fill-aws-grey-550">
+              0%
+            </text>
 
-              {/* X-axis labels */}
-              <text x="0" y="195" className="text-xs fill-muted-foreground">
-                Day 1
-              </text>
-              <text x="290" y="195" className="text-xs fill-muted-foreground">
-                Day 15
-              </text>
-              <text x="580" y="195" className="text-xs fill-muted-foreground">
-                Day 30
-              </text>
-            </svg>
-          </div>
-          <div className="mt-2 flex justify-between text-xs text-muted-foreground">
-            <div>
-              Higher values indicate stronger separation between innie/outie
-              states
-            </div>
-            <div>Updated hourly</div>
-          </div>
+            {/* X-axis labels */}
+            <text x="10" y="195" className="text-xs fill-aws-grey-550">
+              15:00
+            </text>
+            <text x="290" y="195" className="text-xs fill-aws-grey-550">
+              16:30
+            </text>
+            <text x="570" y="195" className="text-xs fill-aws-grey-550">
+              18:00
+            </text>
+          </svg>
         </div>
       </div>
     </div>
