@@ -33,7 +33,7 @@
 			"type": "registry:component",
 			"title": "Dashboard",
 			"description": "A complete dashboard implementation with sidebar, stats cards, charts, and tables.",
-			"registryDependencies": ["https://registry-demo-xi.vercel.app/r/start.json"],
+			"registryDependencies": ["https://registry-demo-ebqw-git-test-vercel-se-team-vtest314.vercel.app/r/start.json"],
 			"files": [
 				{
 					"path": "app/(lumon)/dashboard/page.tsx",
@@ -88,7 +88,7 @@
 			"type": "registry:component",
 			"title": "Terminal Interface",
 			"description": "An interactive terminal interface with number grid, progress tracking, and file selection.",
-			"registryDependencies": ["https://registry-demo-xi.vercel.app/r/start.json"],
+			"registryDependencies": ["https://registry-demo-ebqw-git-test-vercel-se-team-vtest314.vercel.app/r/start.json"],
 			"files": [
 				{
 					"path": "app/(lumon)/terminal/page.tsx",
@@ -123,7 +123,7 @@
 			"type": "registry:component",
 			"title": "Couch Surfer",
 			"description": "A fullstack TV show discovery app with show details, search functionality, and popular shows listing.",
-			"registryDependencies": ["https://registry-demo-xi.vercel.app/r/start.json"],
+			"registryDependencies": ["https://registry-demo-ebqw-git-test-vercel-se-team-vtest314.vercel.app/r/start.json"],
 			"files": [
 				{
 					"path": "app/(lumon)/couch-surfer/page.tsx",

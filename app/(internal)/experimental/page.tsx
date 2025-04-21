@@ -1,4 +1,10 @@
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+} from "@/components/ui/card";
 
 export default function Page() {
   return (
@@ -16,8 +22,8 @@ export default function Page() {
                     Opens a form built with the IBM Carbon design system.
                   </CardDescription>
                 </div>
-                
-                <a href="https://v0.dev/chat/api/open?url=https%3A%2F%2Fregistry-demo-xi.vercel.app%2Fr%2Fcarbon.json">
+
+                <a href="https://v0.dev/chat/api/open?url=https%3A%2F%2Fregistry-demo-ebqw-git-test-vercel-se-team-vtest314.vercel.app%2Fr%2Fcarbon.json">
                   <img
                     src="https://v0.dev/chat-static/button.svg"
                     alt="Open in v0"
@@ -28,8 +34,14 @@ export default function Page() {
               </div>
             </CardHeader>
             <CardContent>
-              <div className={`h-[800px] w-full rounded-md border border-border overflow-hidden`}>
-                <iframe src="/carbon" className="w-full h-full" title="Carbon" />
+              <div
+                className={`h-[800px] w-full rounded-md border border-border overflow-hidden`}
+              >
+                <iframe
+                  src="/carbon"
+                  className="w-full h-full"
+                  title="Carbon"
+                />
               </div>
             </CardContent>
           </Card>

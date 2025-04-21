@@ -5,7 +5,7 @@
   "title": "Dashboard",
   "description": "A complete dashboard implementation with sidebar, stats cards, charts, and tables.",
   "registryDependencies": [
-    "https://registry-demo-xi.vercel.app/r/start.json"
+    "https://registry-demo-ebqw-git-test-vercel-se-team-vtest314.vercel.app/r/start.json"
   ],
   "files": [
     {
@@ -34,7 +34,22 @@
     },
     {
       "path": "components/dashboard/department-table.tsx",
-      "content": "export function DepartmentTable() {\n  return (\n    <div className=\"rounded-lg border bg-card shadow-sm\">\n      <div className=\"p-6\">\n        <h3 className=\"font-semibold\">Department Performance</h3>\n        <p className=\"text-sm text-muted-foreground\">\n          Productivity metrics for severed employees by department\n        </p>\n      </div>\n      <div className=\"border-t\">\n        <div className=\"grid grid-cols-5 border-b p-4 text-sm font-medium\">\n          <div>Department</div>\n          <div>Employees</div>\n          <div>Productivity</div>\n          <div>Deviation</div>\n          <div>Status</div>\n        </div>\n        {[\n          {\n            dept: \"Macrodata Refinement\",\n            employees: \"4\",\n            productivity: \"92%\",\n            deviation: \"0.5%\",\n            status: \"Compliant\",\n          },\n          {\n            dept: \"Optics & Design\",\n            employees: \"6\",\n            productivity: \"88%\",\n            deviation: \"1.2%\",\n            status: \"Compliant\",\n          },\n          {\n            dept: \"Mind & Security\",\n            employees: \"12\",\n            productivity: \"95%\",\n            deviation: \"0.3%\",\n            status: \"Compliant\",\n          },\n          {\n            dept: \"Wellness Center\",\n            employees: \"3\",\n            productivity: \"76%\",\n            deviation: \"3.8%\",\n            status: \"Warning\",\n          },\n        ].map((item, i) => (\n          <div key={i} className=\"grid grid-cols-5 border-b p-4 text-sm\">\n            <div className=\"font-medium\">{item.dept}</div>\n            <div>{item.employees}</div>\n            <div>{item.productivity}</div>\n            <div>{item.deviation}</div>\n            <div>\n              <span\n                className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium ${\n                  item.status === \"Compliant\"\n                    ? \"bg-green-100 text-green-800\"\n                    : item.status === \"Warning\"\n                    ? \"bg-yellow-100 text-yellow-800\"\n                    : \"bg-red-100 text-red-800\"\n                }`}\n              >\n                {item.status}\n              </span>\n            </div>\n          </div>\n        ))}\n      </div>\n    </div>\n  );\n}\n",
+      "content": "export function DepartmentTable() {\n  return (\n    <div className=\"rounded-lg border bg-card shadow-sm\">\n      <div className=\"p-6\">\n        <h3 className=\"font-semibold\">Department Performance</h3>\n        <p className=\"text-sm text-muted-foreground\">\n          Productivity metrics for severed employees by department\n        </p>\n      </div>\n      <div className=\"border-t\">\n        <div className=\"grid grid-cols-5 border-b p-4 text-sm font-medium\">\n          <div>Department</div>\n          <div>Employees</div>\n          <div>Productivity</div>\n          <div>Deviation</div>\n          <div>Status</div>\n        </div>\n        {[\n          {\n            dept: \"Macrodata Refinement\",\n            employees: \"4\",\n            productivity: \"92%\",\n            deviation: \"0.5%\",\n            status: \"Compliant\",\n          },\n          {\n            dept: \"Optics & Design\",\n            employees: \"6\",\n            productivity: \"88%\",\n            deviation: \"1.2%\",\n            status: \"Compliant\",\n          },\n          {\n            dept: \"Mind & Security\",\n            employees: \"12\",\n            productivity: \"95%\",\n            deviation: \"0.3%\",\n            status: \"Compliant\",\n          },\n          {\n            dept: \"Wellness Center\",\n            employees: \"3\",\n            productivity: \"76%\",\n            deviation: \"3.8%\",\n            status: \"Warning\",\n          },\n        ].map((item, i) => (\n          <div key={i} className=\"grid grid-cols-5 border-b p-4 text-sm\">\n            <div className=\"font-medium\">{item.dept}</div>\n            <div>{item.employees}</div>\n            <div>{item.productivity}</div>\n            <div>{item.deviation}</div>\n            <div>\n              <span\n                className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium ${\n                  item.status === \"Compliant\"\
+                    ? \"bg-green-100 text-green-800\"\
+                    : item.status === \"Warning\"\
+                    ? \"bg-yellow-100 text-yellow-800\"\
+                    : \"bg-red-100 text-red-800\"\
+                }`}\
+              >\
+                {item.status}\
+              </span>\
+            </div>\
+          </div>\
+        ))}\
+      </div>\
+    </div>\
+  );\
+}\n",
       "type": "registry:file",
       "target": "components/dashboard/department-table.tsx"
     },
@@ -46,7 +61,38 @@
     },
     {
       "path": "components/dashboard/recent-activity.tsx",
-      "content": "import { Button } from \"@/components/ui/button\";\nimport {\n  AlertTriangle,\n  ArrowUpRight,\n  CheckCircle2,\n  Clock,\n  Filter,\n} from \"lucide-react\";\n\nexport function RecentActivity() {\n  return (\n    <div className=\"col-span-3 rounded-lg border bg-white\">\n      <div className=\"flex items-center justify-between border-b p-4\">\n        <div>\n          <h3 className=\"text-heading-s\">Recent Events</h3>\n          <p className=\"text-body-s text-aws-grey-550\">Last 24 hours</p>\n        </div>\n        <div className=\"flex items-center gap-2\">\n          <Button\n            variant=\"ghost\"\n            size=\"sm\"\n            className=\"h-8 gap-1 text-aws-grey-550 hover:bg-aws-grey-200\"\n          >\n            <Filter className=\"h-4 w-4\" />\n            <span>Filter</span>\n          </Button>\n          <Button\n            variant=\"ghost\"\n            size=\"sm\"\n            className=\"h-8 gap-1 text-aws-blue-600 hover:bg-aws-grey-200\"\n          >\n            <ArrowUpRight className=\"h-4 w-4\" />\n            <span>View all</span>\n          </Button>\n        </div>\n      </div>\n      <div className=\"space-y-1 p-4\">\n        {[\n          {\n            name: \"EC2 Instance i-0a1b2c3d4e5f\",\n            type: \"CPU Utilization\",\n            status: \"warning\",\n            message: \"Exceeded 80% threshold\",\n            time: \"2 minutes ago\",\n          },\n          {\n            name: \"RDS Database prod-db-1\",\n            type: \"Storage\",\n            status: \"success\",\n            message: \"Automatic backup completed\",\n            time: \"15 minutes ago\",\n          },\n          {\n            name: \"Lambda Function api-handler\",\n            type: \"Error Rate\",\n            status: \"error\",\n            message: \"Increased error rate detected\",\n            time: \"32 minutes ago\",\n          },\n          {\n            name: \"ECS Cluster prod-cluster\",\n            type: \"Container Health\",\n            status: \"success\",\n            message: \"Service scaled successfully\",\n            time: \"45 minutes ago\",\n          },\n        ].map((item, i) => (\n          <div\n            key={i}\n            className=\"flex items-start gap-3 rounded-sm border-l-2 border-transparent bg-white p-3 hover:bg-aws-grey-100\"\n            style={{\n              borderLeftColor:\n                item.status === \"warning\"\n                  ? \"#f2cd54\"\n                  : item.status === \"error\"\n                  ? \"#ce3311\"\n                  : \"#2bb534\",\n            }}\n          >\n            <div className=\"mt-0.5\">\n              {item.status === \"warning\" ? (\n                <AlertTriangle className=\"h-4 w-4 text-aws-severity-yellow\" />\n              ) : item.status === \"error\" ? (\n                <AlertTriangle className=\"h-4 w-4 text-aws-severity-red\" />\n              ) : (\n                <CheckCircle2 className=\"h-4 w-4 text-aws-green-500\" />\n              )}\n            </div>\n            <div className=\"flex-1 space-y-1\">\n              <div className=\"flex items-center justify-between\">\n                <p className=\"text-body-s font-semibold\">{item.name}</p>\n                <div className=\"flex items-center gap-1 text-body-s text-aws-grey-550\">\n                  <Clock className=\"h-3 w-3\" />\n                  <span>{item.time}</span>\n                </div>\n              </div>\n              <p className=\"text-body-s text-aws-grey-550\">\n                {item.type} - {item.message}\n              </p>\n            </div>\n          </div>\n        ))}\n      </div>\n    </div>\n  );\n}\n",
+      "content": "import { Button } from \"@/components/ui/button\";\nimport {\n  AlertTriangle,\n  ArrowUpRight,\n  CheckCircle2,\n  Clock,\n  Filter,\n} from \"lucide-react\";\n\nexport function RecentActivity() {\n  return (\n    <div className=\"col-span-3 rounded-lg border bg-white\">\n      <div className=\"flex items-center justify-between border-b p-4\">\n        <div>\n          <h3 className=\"text-heading-s\">Recent Events</h3>\n          <p className=\"text-body-s text-aws-grey-550\">Last 24 hours</p>\n        </div>\n        <div className=\"flex items-center gap-2\">\n          <Button\n            variant=\"ghost\"\n            size=\"sm\"\n            className=\"h-8 gap-1 text-aws-grey-550 hover:bg-aws-grey-200\"\n          >\n            <Filter className=\"h-4 w-4\" />\n            <span>Filter</span>\n          </Button>\n          <Button\n            variant=\"ghost\"\n            size=\"sm\"\n            className=\"h-8 gap-1 text-aws-blue-600 hover:bg-aws-grey-200\"\n          >\n            <ArrowUpRight className=\"h-4 w-4\" />\n            <span>View all</span>\n          </Button>\n        </div>\n      </div>\n      <div className=\"space-y-1 p-4\">\n        {[\n          {\n            name: \"EC2 Instance i-0a1b2c3d4e5f\",\n            type: \"CPU Utilization\",\n            status: \"warning\",\n            message: \"Exceeded 80% threshold\",\n            time: \"2 minutes ago\",\n          },\n          {\n            name: \"RDS Database prod-db-1\",\n            type: \"Storage\",\n            status: \"success\",\n            message: \"Automatic backup completed\",\n            time: \"15 minutes ago\",\n          },\n          {\n            name: \"Lambda Function api-handler\",\n            type: \"Error Rate\",\n            status: \"error\",\n            message: \"Increased error rate detected\",\n            time: \"32 minutes ago\",\n          },\n          {\n            name: \"ECS Cluster prod-cluster\",\n            type: \"Container Health\",\n            status: \"success\",\n            message: \"Service scaled successfully\",\n            time: \"45 minutes ago\",\n          },\n        ].map((item, i) => (\n          <div\n            key={i}\
+            className=\"flex items-start gap-3 rounded-sm border-l-2 border-transparent bg-white p-3 hover:bg-aws-grey-100\"\
+            style={{\
+              borderLeftColor:\
+                item.status === \"warning\"\
+                  ? \"#f2cd54\"\
+                  : item.status === \"error\"\
+                  ? \"#ce3311\"\
+                  : \"#2bb534\",\
+            }}\
+          >\
+            <div className=\"mt-0.5\">\
+              {item.status === \"warning\" ? (\n                <AlertTriangle className=\"h-4 w-4 text-aws-severity-yellow\" />\n              ) : item.status === \"error\" ? (\n                <AlertTriangle className=\"h-4 w-4 text-aws-severity-red\" />\n              ) : (\n                <CheckCircle2 className=\"h-4 w-4 text-aws-green-500\" />\n              )}\
+            </div>\
+            <div className=\"flex-1 space-y-1\">\
+              <div className=\"flex items-center justify-between\">\
+                <p className=\"text-body-s font-semibold\">{item.name}</p>\
+                <div className=\"flex items-center gap-1 text-body-s text-aws-grey-550\">\
+                  <Clock className=\"h-3 w-3\" />\
+                  <span>{item.time}</span>\
+                </div>\
+              </div>\
+              <p className=\"text-body-s text-aws-grey-550\">\
+                {item.type} - {item.message}\
+              </p>\
+            </div>\
+          </div>\
+        ))}\
+      </div>\
+    </div>\
+  );\
+}\n",
       "type": "registry:file",
       "target": "components/dashboard/recent-activity.tsx"
     },

@@ -21,10 +21,10 @@ export default function Home() {
                     Starting Kit
                   </CardTitle>
                   <CardDescription>
-                    Opens a blank app with the Cloudscape theme preconfigured.
+                    Opens a blank app with the Lumon theme preconfigured.
                   </CardDescription>
                 </div>
-                <a href="https://v0.dev/chat/api/open?title=LumonCn+Starting+Kit&prompt=A+blank+app+with+the+Lumon+theme+preconfigured.+Begin+prompting+to+create+your+prototype%21+&url=https%3A%2F%2Fregistry-demo-xi.vercel.app%2Fr%2Fstart.json">
+                <a href="https://v0.dev/chat/api/open?title=LumonCn+Starting+Kit&prompt=A+blank+app+with+the+Lumon+theme+preconfigured.+Begin+prompting+to+create+your+prototype%21+&url=https%3A%2F%2Fregistry-demo-ebqw-git-test-vercel-se-team-vtest314.vercel.app%2Fr%2Fstart.json">
                   <img
                     src="https://v0.dev/chat-static/button.svg"
                     alt="Open in v0"
@@ -49,7 +49,7 @@ export default function Home() {
                     stats cards, charts, and tables.
                   </CardDescription>
                 </div>
-                <a href="https://v0.dev/chat/api/open?title=Dashboard&prompt=A+complete+dashboard+implementation+with+sidebar%2C+stats+cards%2C+charts%2C+and+tables.&url=https%3A%2F%2Fregistry-demo-xi.vercel.app%2Fr%2Fdashboard.json">
+                <a href="https://v0.dev/chat/api/open?title=Dashboard&prompt=A+complete+dashboard+implementation+with+sidebar%2C+stats+cards%2C+charts%2C+and+tables.&url=https%3A%2F%2Fregistry-demo-ebqw-git-test-vercel-se-team-vtest314.vercel.app%2Fr%2Fdashboard.json">
                   <img
                     src="https://v0.dev/chat-static/button.svg"
                     alt="Open in v0"
@@ -85,7 +85,7 @@ export default function Home() {
                     progress tracking, and file selection.
                   </CardDescription>
                 </div>
-                <a href="https://v0.dev/chat/api/open?title=Terminal&prompt=An+interactive+terminal+interface+with+number+grid%2C+progress+tracking%2C+and+file+selection.&url=https%3A%2F%2Fregistry-demo-xi.vercel.app%2Fr%2Fterminal.json">
+                <a href="https://v0.dev/chat/api/open?title=Terminal&prompt=An+interactive+terminal+interface+with+number+grid%2C+progress+tracking%2C+and+file+selection.&url=https%3A%2F%2Fregistry-demo-ebqw-git-test-vercel-se-team-vtest314.vercel.app%2Fr%2Fterminal.json">
                   <img
                     src="https://v0.dev/chat-static/button.svg"
                     alt="Open in v0"
