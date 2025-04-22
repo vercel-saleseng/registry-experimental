@@ -10,7 +10,8 @@ import {
   Terminal,
   MonitorPlay,
   Library,
-  Lightbulb,
+  Computer,
+  ExternalLink,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
@@ -36,9 +37,7 @@ interface NavItem {
   title: string;
   href: string;
   icon?: React.ReactNode;
-  badge?: {
-    text: string;
-  };
+  badge?: any;
 }
 
 interface UsageItem {
@@ -66,14 +65,20 @@ export function InternalSidebar({
 
   const mainNavItems: NavItem[] = [
     {
-      title: "Learn More",
-      href: "https://ui.shadcn.com/docs/registry",
-      icon: <Library className="h-4 w-4" />,
-    },
-    {
       title: "Experimental",
       href: "/experimental",
       icon: <FlaskConical className="h-4 w-4" />,
+    },
+    {
+      title: "Learn More",
+      href: "https://ui.shadcn.com/docs/registry",
+      icon: <Library className="h-4 w-4" />,
+      badge: (
+        <span className="flex items-center gap-1">
+          External Link
+          <ExternalLink className="h-3 w-3" />
+        </span>
+      ),
     },
   ];
 
@@ -95,37 +100,35 @@ export function InternalSidebar({
     },
   ];
 
-  return (
-    <Sidebar variant="sidebar" collapsible="icon">
-      <SidebarHeader>
-        <header className="px-2 py-4 flex items-center">
-          <h1 className="text-xl font-bold text-[var(--zds-text-stronger)]">
-            LumonCn
-          </h1>
-        </header>
-      </SidebarHeader>
+  const experimentalSources: NavItem[] = [
+    {
+      title: "Carbon",
+      href: "/carbon",
+      icon: <Computer className="h-4 w-4" />,
+    },
+  ];
 
+  return (
+    <Sidebar variant="sidebar" collapsible="icon" className="pt-16">
       <SidebarContent>
         {/* Main Nav Items */}
         <SidebarGroup>
-          <SidebarMenu>
-            <SidebarMenuItem className="py-1">
-              <SidebarMenuButton
-                asChild
-                isActive={pathname === "/"}
-                tooltip="Home"
-              >
-                <Link href="/">
-                  <Home className="h-4 w-4" />
-                  <span>Home</span>
-                </Link>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
-          </SidebarMenu>
           <SidebarGroupContent>
             <SidebarMenu>
+              <SidebarMenuItem>
+                <SidebarMenuButton
+                  asChild
+                  isActive={pathname === "/"}
+                  tooltip="Home"
+                >
+                  <Link href="/">
+                    <Home className="h-4 w-4" />
+                    <span>Home</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
               {mainNavItems.map((item) => (
-                <SidebarMenuItem className="py-1" key={item.href}>
+                <SidebarMenuItem key={item.href}>
                   <SidebarMenuButton
                     asChild
                     isActive={
@@ -145,7 +148,7 @@ export function InternalSidebar({
                         "border bg-muted text-foreground border-border"
                       )}
                     >
-                      {item.badge.text}
+                      {item.badge}
                     </SidebarMenuBadge>
                   )}
                 </SidebarMenuItem>
@@ -160,7 +163,30 @@ export function InternalSidebar({
           <SidebarGroupContent>
             <SidebarMenu>
               {templateSources.map((item) => (
-                <SidebarMenuItem className="py-1" key={item.href}>
+                <SidebarMenuItem key={item.href}>
+                  <SidebarMenuButton
+                    asChild
+                    isActive={pathname.startsWith(item.href)}
+                    tooltip={item.title}
+                  >
+                    <Link href={item.href}>
+                      {item.icon}
+                      <span>{item.title}</span>
+                    </Link>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              ))}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+
+        {/* Experimental Sources */}
+        <SidebarGroup>
+          <SidebarGroupLabel>Experimental Sources</SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              {experimentalSources.map((item) => (
+                <SidebarMenuItem key={item.href}>
                   <SidebarMenuButton
                     asChild
                     isActive={pathname.startsWith(item.href)}

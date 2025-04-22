@@ -1,5 +1,6 @@
 "use client";
 
+import { Alert, AlertTitle, AlertDescription } from "@/components/ui/alert";
 import {
   Card,
   CardHeader,
@@ -7,13 +8,25 @@ import {
   CardDescription,
   CardContent,
 } from "@/components/ui/card";
+import { Lightbulb } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="p-6 space-y-6">
-      <div className="space-y-12">
+    <div className="container p-6">
+      <div className="space-y-6">
+        <h1 className="text-2xl font-bold">Hey there!</h1>
+        <p className="text-foreground">
+          This site showcases the capabilities of{" "}
+          <a className="text-primary hover:text-primary/90 underline" href="">
+            shadcn registries,
+          </a>{" "}
+          offering a streamlined approach to integrating pre-existing code into
+          your v0 projects with just a single click. Registries serve as
+          customizable templates, allowing you to tailor v0 generations to
+          reflect your organization’s design preferences and product surfaces.
+        </p>
         <section>
-          <Card>
+          <Card id="starting-kit">
             <CardHeader>
               <div className="flex items-start justify-between">
                 <div>
@@ -117,8 +130,8 @@ export default function Home() {
                     Couch Surfer
                   </CardTitle>
                   <CardDescription>
-                    Opens a fullstack TV show discovery app with show details,
-                    search functionality, and popular shows listing.
+                    Opens a TV show discovery app with show details, search
+                    functionality, and popular shows listing.
                   </CardDescription>
                 </div>
                 <a href="https://v0.dev/chat/api/open?title=Dashboard&prompt=Zapier+Dashboard&url=https%3A%2F%2Fzinnia-registry.vercel.app%2Fr%2Fdashboard.json">
@@ -132,6 +145,20 @@ export default function Home() {
               </div>
             </CardHeader>
             <CardContent>
+              <Alert className="mb-6">
+                <Lightbulb className="h-4 w-4" />
+                <AlertTitle>Good to Know</AlertTitle>
+                <AlertDescription>
+                  This fullstack app that was built off of the{" "}
+                  <a
+                    className="text-primary hover:text-primary/90 underline"
+                    href="#starting-kit"
+                  >
+                    starting kit using v0
+                  </a>
+                  !
+                </AlertDescription>
+              </Alert>
               <div
                 className={`h-[800px] w-full rounded-md border border-border overflow-hidden`}
               >

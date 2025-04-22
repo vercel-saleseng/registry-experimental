@@ -4,6 +4,7 @@ import { SidebarProvider } from "@/components/ui/sidebar";
 import { Toaster } from "@/components/ui/toaster";
 import { Inter } from "next/font/google";
 import { InternalSidebar } from "@/components/internal-sidebar";
+import { InternalTopbar } from "@/components/internal-topbar";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
@@ -14,6 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <InternalTopbar />
         <SidebarProvider>
           <InternalSidebar />
           <main className="flex justify-center w-full mt-16">
