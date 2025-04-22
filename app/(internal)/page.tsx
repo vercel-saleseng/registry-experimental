@@ -134,7 +134,7 @@ export default function Home() {
                     functionality, and popular shows listing.
                   </CardDescription>
                 </div>
-                <a href="https://v0.dev/chat/api/open?url=https%3A%2F%2Fregistry-demo-xi.vercel.app%2Fr%2Fcms.json">
+                <a href="https://v0.dev/chat/api/open?title=Dashboard&prompt=Zapier+Dashboard&url=https%3A%2F%2Fzinnia-registry.vercel.app%2Fr%2Fdashboard.json">
                   <img
                     src="https://v0.dev/chat-static/button.svg"
                     alt="Open in v0"
