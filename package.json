@@ -11,7 +11,11 @@
   },
   "dependencies": {
     "@carbon/react": "^1.80.1",
+    "@fluentui/web-components": "^2.6.1",
     "@hookform/resolvers": "^3.9.1",
+    "@microsoft/fast-element": "^2.2.1",
+    "@microsoft/fast-foundation": "^2.50.0",
+    "@microsoft/fast-react-wrapper": "^0.3.25",
     "@radix-ui/react-accordion": "^1.2.2",
     "@radix-ui/react-alert-dialog": "^1.1.4",
     "@radix-ui/react-aspect-ratio": "^1.1.1",

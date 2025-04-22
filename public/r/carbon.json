@@ -10,7 +10,7 @@
   "files": [
     {
       "path": "app/(carbon)/layout.tsx",
-      "content": "\"use client\";\n\nimport type React from \"react\";\nimport \"@carbon/styles/css/styles.css\";\n\nexport default function RootLayout({\n  children,\n}: {\n  children: React.ReactNode;\n}) {\n  return (\n    <html lang=\"en\">\n      <body>\n        <main\n          style={{\n            display: \"flex\",\n            justifyContent: \"center\",\n            alignItems: \"center\",\n            padding: \"20px\",\n          }}\n        >\n          <div\n            style={{\n              maxWidth: \"800px\",\n            }}\n          >\n            {children}\n          </div>\n        </main>\n      </body>\n    </html>\n  );\n}\n",
+      "content": "import type React from \"react\";\nimport \"@carbon/styles/css/styles.css\";\n\nexport default function RootLayout({\n  children,\n}: {\n  children: React.ReactNode;\n}) {\n  return (\n    <html lang=\"en\">\n      <body>\n        <main\n          style={{\n            display: \"flex\",\n            justifyContent: \"center\",\n            alignItems: \"center\",\n            padding: \"20px\",\n          }}\n        >\n          <div\n            style={{\n              maxWidth: \"800px\",\n            }}\n          >\n            {children}\n          </div>\n        </main>\n      </body>\n    </html>\n  );\n}\n",
       "type": "registry:file",
       "target": "app/layout.tsx"
     },

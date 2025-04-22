@@ -134,7 +134,7 @@ export default function Home() {
                     functionality, and popular shows listing.
                   </CardDescription>
                 </div>
-                <a href="https://v0.dev/chat/api/open?title=Dashboard&prompt=Zapier+Dashboard&url=https%3A%2F%2Fzinnia-registry.vercel.app%2Fr%2Fdashboard.json">
+                <a href="https://v0.dev/chat/api/open?url=https%3A%2F%2Fregistry-demo-xi.vercel.app%2Fr%2Fcms.json">
                   <img
                     src="https://v0.dev/chat-static/button.svg"
                     alt="Open in v0"
@@ -149,14 +149,13 @@ export default function Home() {
                 <Lightbulb className="h-4 w-4" />
                 <AlertTitle>Good to Know</AlertTitle>
                 <AlertDescription>
-                  This fullstack app that was built off of the{" "}
+                  This fullstack app that was built in v0 using the{" "}
                   <a
                     className="text-primary hover:text-primary/90 underline"
                     href="#starting-kit"
                   >
-                    starting kit using v0
+                    starting kit
                   </a>
-                  !
                 </AlertDescription>
               </Alert>
               <div
