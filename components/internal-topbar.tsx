@@ -24,7 +24,7 @@ export function InternalTopbar() {
         <div className="flex items-center gap-3">
           <Button variant="ghost" size="sm" asChild>
             <Link
-              href="https://github.com/zinnia-fyi/registry-demo"
+              href="https://github.com/vercel-saleseng/registry-demo"
               target="_blank"
               rel="noreferrer"
             >
