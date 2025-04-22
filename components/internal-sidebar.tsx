@@ -12,6 +12,7 @@ import {
   Library,
   Computer,
   ExternalLink,
+  Cross,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
@@ -105,6 +106,11 @@ export function InternalSidebar({
       title: "Carbon",
       href: "/carbon",
       icon: <Computer className="h-4 w-4" />,
+    },
+    {
+      title: "CMS",
+      href: "/cms",
+      icon: <Cross className="h-4 w-4" />,
     },
   ];
 
