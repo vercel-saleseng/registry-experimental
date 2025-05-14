@@ -16,7 +16,7 @@ export function InternalTopbar() {
         <div className="flex items-center gap-6">
           <Link href="/" className="flex items-center">
             <h1 className="text-2xl font-bold font-mono text-primary">
-              LumonCn
+              Registry Experimental
             </h1>
           </Link>
         </div>

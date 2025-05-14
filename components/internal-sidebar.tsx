@@ -1,17 +1,11 @@
 "use client";
 
 import type * as React from "react";
-import { useRouter, usePathname } from "next/navigation";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import {
   Home,
-  FlaskConical,
-  LayoutDashboard,
-  Terminal,
-  MonitorPlay,
-  Library,
   Computer,
-  ExternalLink,
   Cross,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -19,19 +13,11 @@ import Image from "next/image";
 import {
   Sidebar,
   SidebarContent,
-  SidebarFooter,
   SidebarGroup,
   SidebarGroupContent,
-  SidebarGroupLabel,
-  SidebarHeader,
   SidebarMenu,
-  SidebarMenuBadge,
   SidebarMenuButton,
   SidebarMenuItem,
-  SidebarProvider,
-  SidebarSeparator,
-  SidebarTrigger,
-  useSidebar,
 } from "@/components/ui/sidebar";
 
 interface NavItem {
@@ -59,47 +45,7 @@ export function InternalSidebar({
   onToggle,
   className,
 }: SidebarProps) {
-  const router = useRouter();
   const pathname = usePathname();
-  const { state, toggleSidebar } = useSidebar();
-  const isCollapsed = state === "collapsed";
-
-  const mainNavItems: NavItem[] = [
-    {
-      title: "Experimental",
-      href: "/experimental",
-      icon: <FlaskConical className="h-4 w-4" />,
-    },
-    {
-      title: "Learn More",
-      href: "https://ui.shadcn.com/docs/registry",
-      icon: <Library className="h-4 w-4" />,
-      badge: (
-        <span className="flex items-center gap-1">
-          External Link
-          <ExternalLink className="h-3 w-3" />
-        </span>
-      ),
-    },
-  ];
-
-  const templateSources: NavItem[] = [
-    {
-      title: "Dashboard",
-      href: "/dashboard",
-      icon: <LayoutDashboard className="h-4 w-4" />,
-    },
-    {
-      title: "Couch Surfer",
-      href: "/couch-surfer",
-      icon: <MonitorPlay className="h-4 w-4" />,
-    },
-    {
-      title: "Terminal",
-      href: "/terminal",
-      icon: <Terminal className="h-4 w-4" />,
-    },
-  ];
 
   const experimentalSources: NavItem[] = [
     {
@@ -133,64 +79,6 @@ export function InternalSidebar({
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
-              {mainNavItems.map((item) => (
-                <SidebarMenuItem key={item.href}>
-                  <SidebarMenuButton
-                    asChild
-                    isActive={
-                      pathname === item.href ||
-                      (pathname === "" && item.href === "/")
-                    }
-                    tooltip={item.title}
-                  >
-                    <Link href={item.href}>
-                      {item.icon}
-                      <span>{item.title}</span>
-                    </Link>
-                  </SidebarMenuButton>
-                  {item.badge && (
-                    <SidebarMenuBadge
-                      className={cn(
-                        "border bg-muted text-foreground border-border"
-                      )}
-                    >
-                      {item.badge}
-                    </SidebarMenuBadge>
-                  )}
-                </SidebarMenuItem>
-              ))}
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
-
-        {/* Template Sources */}
-        <SidebarGroup>
-          <SidebarGroupLabel>Template Sources</SidebarGroupLabel>
-          <SidebarGroupContent>
-            <SidebarMenu>
-              {templateSources.map((item) => (
-                <SidebarMenuItem key={item.href}>
-                  <SidebarMenuButton
-                    asChild
-                    isActive={pathname.startsWith(item.href)}
-                    tooltip={item.title}
-                  >
-                    <Link href={item.href}>
-                      {item.icon}
-                      <span>{item.title}</span>
-                    </Link>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              ))}
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
-
-        {/* Experimental Sources */}
-        <SidebarGroup>
-          <SidebarGroupLabel>Experimental Sources</SidebarGroupLabel>
-          <SidebarGroupContent>
-            <SidebarMenu>
               {experimentalSources.map((item) => (
                 <SidebarMenuItem key={item.href}>
                   <SidebarMenuButton

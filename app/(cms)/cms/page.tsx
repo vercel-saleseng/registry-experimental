@@ -183,18 +183,18 @@ export default function WebComponentsPage() {
     // Cleanup function to remove event listeners
     return () => {
       buttonRef.current?.removeEventListener("click", handleButtonClick);
-      operationRef.current?.removeEventListener("ds-change", function () {});
-      calculatorFormRef.current?.removeEventListener("submit", function () {});
+      operationRef.current?.removeEventListener("ds-change", function () { });
+      calculatorFormRef.current?.removeEventListener("submit", function () { });
       window.removeEventListener("hashchange", updatePaginationFromHash);
-      textFieldRef.current?.removeEventListener("ds-change", () => {});
+      textFieldRef.current?.removeEventListener("ds-change", () => { });
       autocompleteRef.current?.removeEventListener(
         "ds-input-value-change",
-        () => {}
+        () => { }
       );
-      autocompleteRef.current?.removeEventListener("ds-change", function () {});
-      filterChipRef.current?.removeEventListener("ds-delete", () => {});
-      editLink?.removeEventListener("click", () => {});
-      removeLink?.removeEventListener("click", () => {});
+      autocompleteRef.current?.removeEventListener("ds-change", function () { });
+      filterChipRef.current?.removeEventListener("ds-delete", () => { });
+      editLink?.removeEventListener("click", () => { });
+      removeLink?.removeEventListener("click", () => { });
       modalRef.current?.removeEventListener("ds-exit", closeModal);
       modalToggleRef.current?.removeEventListener("click", openModal);
       modalFormRef.current?.removeEventListener("submit", closeModal);

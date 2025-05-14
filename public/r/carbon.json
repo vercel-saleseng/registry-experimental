@@ -2,8 +2,8 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "carbon",
   "type": "registry:component",
-  "title": "Carbon Design Components",
-  "description": "A demonstration page of Carbon Design System form components including inputs, checkboxes, radio buttons, selects and more.",
+  "title": "Carbon",
+  "description": "A demonstration page of the Carbon design system.",
   "dependencies": [
     "@carbon/react"
   ],

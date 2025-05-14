@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Registry Experimental
+
+This is a [Next.js](https://nextjs.org) project that demonstrates the capabilities of shadcn registries, offering a streamlined approach to integrating pre-existing code into v0 projects with just a single click.
 
 ## Getting Started
 
@@ -16,18 +18,17 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Creating Your Own Registry
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+If you want to create your own registry, you should start from the official template: [willsather/registry-starter](https://github.com/willsather/registry-starter). This template provides a rapid way to build your own design registry using shadcn/ui and is the recommended starting point for new projects.
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+To learn more about Next.js and shadcn/ui, take a look at the following resources:
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- [shadcn/ui Documentation](https://ui.shadcn.com) - learn about shadcn/ui components and customization.
 
 ## Deploy on Vercel
 

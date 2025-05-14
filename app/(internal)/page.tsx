@@ -1,5 +1,3 @@
-"use client";
-
 import { Alert, AlertTitle, AlertDescription } from "@/components/ui/alert";
 import {
   Card,
@@ -10,59 +8,45 @@ import {
 } from "@/components/ui/card";
 import { Lightbulb } from "lucide-react";
 
-export default function Home() {
+export default function Page() {
   return (
     <div className="container p-6">
       <div className="space-y-6">
         <h1 className="text-2xl font-bold">Hey there!</h1>
         <p className="text-foreground">
-          This site showcases the capabilities of{" "}
+          This site showcases the possibilities of{" "}
           <a className="text-primary hover:text-primary/90 underline" href="">
             shadcn registries,
           </a>{" "}
           offering a streamlined approach to integrating pre-existing code into
           your v0 projects with just a single click. Registries serve as
           customizable templates, allowing you to tailor v0 generations to
-          reflect your organization’s design preferences and product surfaces.
+          reflect your organization's design preferences and product surfaces.
+        </p>
+        <p className="text-foreground">
+          If you want to create your own registry, you should start from this template: <a className="text-primary hover:text-primary/90 underline" href="https://github.com/willsather/registry-starter" target="_blank" rel="noopener noreferrer">willsather/registry-starter</a>. This template provides a rapid way to build your own design registry using shadcn/ui and is the recommended starting point for new projects.
         </p>
         <section>
-          <Card id="starting-kit">
-            <CardHeader>
-              <div className="flex items-start justify-between">
-                <div>
-                  <CardTitle className="text-lg font-medium text-[var(--zds-text-stronger)]">
-                    Starting Kit
-                  </CardTitle>
-                  <CardDescription>
-                    Opens a blank app with the Lumon theme preconfigured.
-                  </CardDescription>
-                </div>
-                <a href="https://v0.dev/chat/api/open?title=LumonCn+Starting+Kit&prompt=A+blank+app+with+the+Lumon+theme+preconfigured.+Begin+prompting+to+create+your+prototype%21+&url=https%3A%2F%2Fregistry-demo-xi.vercel.app%2Fr%2Fstart.json">
-                  <img
-                    src="https://v0.dev/chat-static/button.svg"
-                    alt="Open in v0"
-                    width="99"
-                    height="32"
-                  />
-                </a>
-              </div>
-            </CardHeader>
-          </Card>
-        </section>
-        <section>
           <Card>
             <CardHeader>
               <div className="flex items-start justify-between">
                 <div>
                   <CardTitle className="text-lg font-medium text-[var(--zds-text-stronger)]">
-                    Dashboard
+                    IBM Carbon
                   </CardTitle>
                   <CardDescription>
-                    Opens a complete dashboard implementation with sidebar,
-                    stats cards, charts, and tables.
+                    Opens a form built with the{" "}
+                    <a
+                      className="text-primary hover:text-primary/90 underline"
+                      href="https://carbondesignsystem.com/"
+                    >
+                      Carbon
+                    </a>{" "}
+                    design system.
                   </CardDescription>
                 </div>
-                <a href="https://v0.dev/chat/api/open?title=Dashboard&prompt=A+complete+dashboard+implementation+with+sidebar%2C+stats+cards%2C+charts%2C+and+tables.&url=https%3A%2F%2Fregistry-demo-xi.vercel.app%2Fr%2Fdashboard.json">
+
+                <a href="https://v0.dev/chat/api/open?url=https%3A%2F%2Fregistry-demo-xi.vercel.app%2Fr%2Fcarbon.json">
                   <img
                     src="https://v0.dev/chat-static/button.svg"
                     alt="Open in v0"
@@ -77,9 +61,9 @@ export default function Home() {
                 className={`h-[800px] w-full rounded-md border border-border overflow-hidden`}
               >
                 <iframe
-                  src="/dashboard"
+                  src="/carbon"
                   className="w-full h-full"
-                  title="Dashboard"
+                  title="Carbon"
                 />
               </div>
             </CardContent>
@@ -91,50 +75,21 @@ export default function Home() {
               <div className="flex items-start justify-between">
                 <div>
                   <CardTitle className="text-lg font-medium text-[var(--zds-text-stronger)]">
-                    Terminal
+                    CMS
                   </CardTitle>
                   <CardDescription>
-                    Opens an interactive terminal interface with number grid,
-                    progress tracking, and file selection.
+                    Opens a sandbox built with the{" "}
+                    <a
+                      className="text-primary hover:text-primary/90 underline"
+                      href="https://design.cms.gov/?theme=core/"
+                    >
+                      CMS
+                    </a>{" "}
+                    design system.
                   </CardDescription>
                 </div>
-                <a href="https://v0.dev/chat/api/open?title=Terminal&prompt=An+interactive+terminal+interface+with+number+grid%2C+progress+tracking%2C+and+file+selection.&url=https%3A%2F%2Fregistry-demo-xi.vercel.app%2Fr%2Fterminal.json">
-                  <img
-                    src="https://v0.dev/chat-static/button.svg"
-                    alt="Open in v0"
-                    width="99"
-                    height="32"
-                  />
-                </a>
-              </div>
-            </CardHeader>
-            <CardContent>
-              <div
-                className={`h-[800px] w-full rounded-md border border-border overflow-hidden`}
-              >
-                <iframe
-                  src="/terminal"
-                  className="w-full h-full"
-                  title="Terminal"
-                />
-              </div>
-            </CardContent>
-          </Card>
-        </section>
-        <section>
-          <Card>
-            <CardHeader>
-              <div className="flex items-start justify-between">
-                <div>
-                  <CardTitle className="text-lg font-medium text-[var(--zds-text-stronger)]">
-                    Couch Surfer
-                  </CardTitle>
-                  <CardDescription>
-                    Opens a TV show discovery app with show details, search
-                    functionality, and popular shows listing.
-                  </CardDescription>
-                </div>
-                <a href="https://v0.dev/chat/api/open?title=Dashboard&prompt=Zapier+Dashboard&url=https%3A%2F%2Fzinnia-registry.vercel.app%2Fr%2Fdashboard.json">
+
+                <a href="https://v0.dev/chat/api/open?url=https%3A%2F%2Fregistry-demo-xi.vercel.app%2Fr%2Fcms.json">
                   <img
                     src="https://v0.dev/chat-static/button.svg"
                     alt="Open in v0"
@@ -149,23 +104,21 @@ export default function Home() {
                 <Lightbulb className="h-4 w-4" />
                 <AlertTitle>Good to Know</AlertTitle>
                 <AlertDescription>
-                  This fullstack app that was built in v0 using the{" "}
+                  This sandbox loads the CMS design system's web components via
+                  CDN. Since v0 generates React code, the{" "}
                   <a
                     className="text-primary hover:text-primary/90 underline"
-                    href="#starting-kit"
+                    href="https://brianperry.dev/posts/2021/working-around-reacts-web-component-limitations/"
                   >
-                    starting kit
-                  </a>
+                    usual limitations
+                  </a>{" "}
+                  of using web components in React still apply.
                 </AlertDescription>
               </Alert>
               <div
                 className={`h-[800px] w-full rounded-md border border-border overflow-hidden`}
               >
-                <iframe
-                  src="/couch-surfer"
-                  className="w-full h-full"
-                  title="Couch Surfer"
-                />
+                <iframe src="/cms" className="w-full h-full" title="CMS" />
               </div>
             </CardContent>
           </Card>
