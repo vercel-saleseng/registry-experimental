@@ -46,7 +46,7 @@ export default function Page() {
                   </CardDescription>
                 </div>
 
-                <a href="https://v0.dev/chat/api/open?url=https%3A%2F%2Fregistry-demo-xi.vercel.app%2Fr%2Fcarbon.json">
+                <a href="https://v0.dev/chat/api/open?url=https%3A%2F%2Fregistry-experimental.vercel.app%2Fr%2Fcarbon.json">
                   <img
                     src="https://v0.dev/chat-static/button.svg"
                     alt="Open in v0"
@@ -89,7 +89,7 @@ export default function Page() {
                   </CardDescription>
                 </div>
 
-                <a href="https://v0.dev/chat/api/open?url=https%3A%2F%2Fregistry-demo-xi.vercel.app%2Fr%2Fcms.json">
+                <a href="https://v0.dev/chat/api/open?url=https%3A%2F%2Fregistry-experimental.vercel.app%2Fr%2Fcms.json">
                   <img
                     src="https://v0.dev/chat-static/button.svg"
                     alt="Open in v0"
