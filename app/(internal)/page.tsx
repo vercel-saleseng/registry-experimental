@@ -12,20 +12,6 @@ export default function Page() {
   return (
     <div className="container p-6">
       <div className="space-y-6">
-        <h1 className="text-2xl font-bold">Hey there!</h1>
-        <p className="text-foreground">
-          This site showcases the possibilities of{" "}
-          <a className="text-primary hover:text-primary/90 underline" href="">
-            shadcn registries,
-          </a>{" "}
-          offering a streamlined approach to integrating pre-existing code into
-          your v0 projects with just a single click. Registries serve as
-          customizable templates, allowing you to tailor v0 generations to
-          reflect your organization's design preferences and product surfaces.
-        </p>
-        <p className="text-foreground">
-          If you want to create your own registry, you should start from this template: <a className="text-primary hover:text-primary/90 underline" href="https://github.com/willsather/registry-starter" target="_blank" rel="noopener noreferrer">willsather/registry-starter</a>. This template provides a rapid way to build your own design registry using shadcn/ui and is the recommended starting point for new projects.
-        </p>
         <section>
           <Card>
             <CardHeader>
